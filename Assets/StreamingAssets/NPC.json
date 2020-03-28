@@ -1,0 +1,24 @@
+{
+    "Items": [
+        {
+            "type": "Worker",
+            "desk": 0,
+            "id": 0
+        },
+        {
+            "type": "Worker",
+            "desk": 1,
+            "id": 1
+        },
+        {
+            "type": "Worker",
+            "desk": 2,
+            "id": 2
+        },
+        {
+            "type": "Worker",
+            "desk": 3,
+            "id": 3
+        }
+    ]
+}

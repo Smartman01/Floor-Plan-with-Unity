@@ -7,14 +7,20 @@ using UnityEngine.AI;
 public class NPC_Controller : MonoBehaviour
 {
     [SerializeField]
-    Transform target;
+    public Transform target;
 
     NavMeshAgent navMeshAgent;
+
+    TextMesh textMesh;
+
+    public int worker_id = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        textMesh = GetComponentInChildren<TextMesh>();
+        textMesh.text = "Worker: " + worker_id; 
 
         Destination();
     }

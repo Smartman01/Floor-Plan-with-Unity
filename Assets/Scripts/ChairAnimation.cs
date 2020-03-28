@@ -22,6 +22,8 @@ public class ChairAnimation : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //other.transform.SetParent(this.transform);
+        //other.transform.position = sitPos.transform.position;
         anim.SetBool("Turn_In", true);
     }
 
