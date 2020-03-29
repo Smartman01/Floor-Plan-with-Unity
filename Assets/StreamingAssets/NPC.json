@@ -3,22 +3,26 @@
         {
             "type": "Worker",
             "desk": 0,
-            "id": 0
+            "id": 0,
+            "Schedule" : ["Desk_0", "Desk_0", "Lunch", "Meeting", "Desk_0"]
         },
         {
             "type": "Worker",
             "desk": 1,
-            "id": 1
+            "id": 1,
+            "Schedule" : ["Desk_1", "Meeting", "Lunch", "Meeting", "Desk_1"]
         },
         {
             "type": "Worker",
             "desk": 2,
-            "id": 2
+            "id": 2,
+            "Schedule" : ["Desk_2", "Meeting", "Lunch", "Meeting", "Desk_2"]
         },
         {
             "type": "Worker",
             "desk": 3,
-            "id": 3
+            "id": 3,
+            "Schedule" : ["Desk_3", "Desk_3", "Lunch", "Desk_3", "Desk_3"]
         }
     ]
 }

@@ -17,16 +17,21 @@ public class JSONLoader : MonoBehaviour
         jsonString = File.ReadAllText(path);
 
         NPC[] npc = JsonHelper.FromJson<NPC>(jsonString);
-        foreach (NPC n in npc)
-            CreateNPC(n.id);
+        for (int i = 0; i < npc.Length; i++)
+            CreateNPC(npc[i]);
     }
 
-    void CreateNPC(int id)
+    void CreateNPC(NPC npc)
     {
-        NPC_Controller npc = myPrefab.GetComponent<NPC_Controller>();
-        npc.target = GameObject.Find(id + "").transform;
-        npc.worker_id = id;
-        
+        NPC_Controller npcCont = myPrefab.GetComponent<NPC_Controller>();
+
+        npcCont.target = new Transform[npc.Schedule.Length];
+
+        for (int i = 0; i < npc.Schedule.Length; i++)
+            npcCont.target[i] = GameObject.Find(npc.Schedule[i]).transform;
+
+        npcCont.worker_id = npc.id;
+
         Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }
@@ -66,4 +71,5 @@ public class NPC
     public string type;
     public int desk;
     public int id;
+    public string[] Schedule;
 }

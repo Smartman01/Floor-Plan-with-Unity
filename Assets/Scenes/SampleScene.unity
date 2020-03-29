@@ -112,8 +112,8 @@ NavMeshSettings:
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.02
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -228,8 +228,74 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &786339458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786339461}
+  - component: {fileID: 786339460}
+  - component: {fileID: 786339459}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &786339459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786339458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &786339460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786339458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &786339461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786339458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +308,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -307,14 +374,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.35563934, y: -0.0072919796, z: 0.0027747685, w: -0.93459076}
-  m_LocalPosition: {x: -2.021288, y: 10.642755, z: -7.214141}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 53.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 13.01, y: 0, z: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872b8cf8f57bc3b4d88552d8a8bd1e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  rotateSpeed: 5
+--- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,12 +405,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 872b8cf8f57bc3b4d88552d8a8bd1e8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e3fb55e1f87dbc459a695df0783650d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
-  rotateSpeed: 5
 --- !u!95 &1154312641
 Animator:
   serializedVersion: 3
@@ -348,6 +427,105 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1164323410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164323414}
+  - component: {fileID: 1164323413}
+  - component: {fileID: 1164323412}
+  - component: {fileID: 1164323411}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1164323411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164323410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1164323412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164323410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1164323413
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164323410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1164323414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164323410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1482672025}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1215081418
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1341766978
 Animator:
@@ -412,6 +590,98 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1482672024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482672025}
+  - component: {fileID: 1482672027}
+  - component: {fileID: 1482672026}
+  - component: {fileID: 1482672028}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1482672025
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482672024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1164323414}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: 150}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1482672026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482672024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1482672027
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482672024}
+  m_CullTransparentMesh: 0
+--- !u!114 &1482672028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482672024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bcc226f43018f438d611a8401b8dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1603524295
 Animator:
   serializedVersion: 3
@@ -521,7 +791,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1284653561941487
 GameObject:
@@ -1891,14 +2161,41 @@ GameObject:
   - component: {fileID: 853404304698226139}
   - component: {fileID: 5674158702509033126}
   - component: {fileID: 3728998139132344673}
+  - component: {fileID: 368378165360077699}
+  - component: {fileID: 368378165360077698}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330823]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &368378165360077698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368378165360077697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7319939, y: 0.7061305, z: 0.961262}
+  m_Center: {x: 0.5265686, y: -0.00000011920929, z: 0.48063087}
+--- !u!114 &368378165360077699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368378165360077697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!33 &370007946514809101
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2784,14 +3081,41 @@ GameObject:
   - component: {fileID: 4659773343043219148}
   - component: {fileID: 1014481477995533978}
   - component: {fileID: 8330506700980265823}
+  - component: {fileID: 534042770909208884}
+  - component: {fileID: 534042770909208883}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330822]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &534042770909208883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534042770909208882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9429922, y: 0.7061301, z: 0.9612615}
+  m_Center: {x: 0.6320677, y: 0, z: 0.48063076}
+--- !u!114 &534042770909208884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534042770909208882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!1 &537149607665706313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,8 +4264,7 @@ GameObject:
   - component: {fileID: 5834742531121818772}
   - component: {fileID: 4691018783532779299}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330827]
+  m_Name: BossMeetingSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -4806,7 +5129,7 @@ GameObject:
   - component: {fileID: 1023706583214535174}
   - component: {fileID: 1023706583214535173}
   m_Layer: 0
-  m_Name: 3
+  m_Name: Desk_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5924,14 +6247,41 @@ GameObject:
   - component: {fileID: 8678156181400736182}
   - component: {fileID: 772229927060437042}
   - component: {fileID: 7375340365916609284}
+  - component: {fileID: 1474444661815612357}
+  - component: {fileID: 1474444661815612356}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330820]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &1474444661815612356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474444661815612355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9023068, y: 0.7061304, z: 0.96126187}
+  m_Center: {x: 0.61172676, y: 0.00000002601312, z: 0.48063087}
+--- !u!114 &1474444661815612357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474444661815612355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!1 &1488231467975038283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8563,14 +8913,41 @@ GameObject:
   - component: {fileID: 2167874582850924377}
   - component: {fileID: 7696803904382810495}
   - component: {fileID: 1920415776388312948}
+  - component: {fileID: 2184857779315431001}
+  - component: {fileID: 2184857779315431000}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330821]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &2184857779315431000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184857779315430999}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9003701, y: 0.70613045, z: 0.96126187}
+  m_Center: {x: 0.6107574, y: 0.0000002185884, z: 0.48062629}
+--- !u!114 &2184857779315431001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184857779315430999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!1 &2190483748829340819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8883,7 +9260,7 @@ GameObject:
   - component: {fileID: 2237788297031821761}
   - component: {fileID: 2237788297031821760}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Desk_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11325,7 +11702,7 @@ GameObject:
   - component: {fileID: 3072449737720900149}
   - component: {fileID: 3072449737720900148}
   m_Layer: 0
-  m_Name: 2
+  m_Name: Desk_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15388,14 +15765,41 @@ GameObject:
   - component: {fileID: 4098675469305685314}
   - component: {fileID: 4617087094353458356}
   - component: {fileID: 1575606261710197813}
+  - component: {fileID: 4284532376136460206}
+  - component: {fileID: 4284532376136460205}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330825]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &4284532376136460205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284532376136460204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7651125, y: 0.7061304, z: 0.96126187}
+  m_Center: {x: 0.54312867, y: -0.00000018204074, z: 0.48063087}
+--- !u!114 &4284532376136460206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284532376136460204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!23 &4285797571213704155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15829,10 +16233,10 @@ GameObject:
   - component: {fileID: 3958124130173270409}
   - component: {fileID: 6527380983066874431}
   m_Layer: 0
-  m_Name: HermanMiller_Special_Table HermanMiller_Special_Table [354406]
+  m_Name: Lunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &4522061987999205080
@@ -19746,7 +20150,7 @@ GameObject:
   - component: {fileID: 5486140540003618963}
   - component: {fileID: 5486140540003618962}
   m_Layer: 0
-  m_Name: 0
+  m_Name: Desk_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22145,7 +22549,7 @@ GameObject:
   - component: {fileID: 4763635473865698927}
   - component: {fileID: 1878761208953462399}
   m_Layer: 0
-  m_Name: HermanMiller_HGN_DP1DYT-2854144LBLR HMI - DP1DYT.2854144LBLR [333673]
+  m_Name: Meeting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -24267,14 +24671,41 @@ GameObject:
   - component: {fileID: 2219632958280597976}
   - component: {fileID: 6039930811901380143}
   - component: {fileID: 6842017020883325387}
+  - component: {fileID: 6855330463003259835}
+  - component: {fileID: 6855330463003259834}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330826]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &6855330463003259834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855330463003259833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7757057, y: 0.7061301, z: 0.9612615}
+  m_Center: {x: 0.54842454, y: 0, z: 0.48063076}
+--- !u!114 &6855330463003259835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855330463003259833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!1 &6861539996623096596
 GameObject:
   m_ObjectHideFlags: 0
@@ -31209,14 +31640,41 @@ GameObject:
   - component: {fileID: 7953718569509332879}
   - component: {fileID: 2941581000037494555}
   - component: {fileID: 448836220008360840}
+  - component: {fileID: 8772100222261153561}
+  - component: {fileID: 8772100222261153560}
   m_Layer: 0
-  m_Name: HermanMiller_Seating_Cosm_WorkChair Low Back Hgt Std Hgt Range Self Adj
-    Tilt Fixed Arms [330824]
-  m_TagString: Untagged
+  m_Name: Meeting_
+  m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &8772100222261153560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772100222261153559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7612293, y: 0.70613045, z: 0.96126187}
+  m_Center: {x: 0.5411867, y: -0.00000009468337, z: 0.480627}
+--- !u!114 &8772100222261153561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772100222261153559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1524d4493e3d63419be14808fa9a201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
 --- !u!1 &8794095016678001255
 GameObject:
   m_ObjectHideFlags: 0
