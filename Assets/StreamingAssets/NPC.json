@@ -23,6 +23,12 @@
             "desk": 3,
             "id": 3,
             "Schedule": [ "Desk_3", "Desk_3", "Lunch", "Desk_3", "Desk_3" ]
+        },
+        {
+            "type": "Boss",
+            "desk": 3789,
+            "id": 38900,
+            "Schedule": [ "BossDesk", "BossMeetingSeat", "Lunch", "BossMeetingSeat", "BossDesk" ]
         }
     ]
 }

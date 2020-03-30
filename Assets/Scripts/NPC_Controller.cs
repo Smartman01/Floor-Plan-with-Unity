@@ -15,13 +15,16 @@ public class NPC_Controller : MonoBehaviour
 
     TextMesh textMesh;
 
+    public bool isBoss = false;
+
     public int worker_id = 0;
 
     private void Awake()
     {
         meetingChairs = GameObject.FindGameObjectsWithTag("MeetingSeats");
 
-        DecideMeetingChair();
+        if (!isBoss)
+            DecideMeetingChair();
     }
 
     // Start is called before the first frame update
@@ -29,7 +32,11 @@ public class NPC_Controller : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         textMesh = GetComponentInChildren<TextMesh>();
-        textMesh.text = "Worker: " + worker_id;
+        
+        if (!isBoss)
+            textMesh.text = "Worker: " + worker_id;
+        else
+            textMesh.text = "Boss: " + worker_id;
 
         Destination();
     }

@@ -9,9 +9,9 @@ public class JSONLoader : MonoBehaviour
     string path;
     string jsonString;
 
-    public GameObject myPrefab;
+    public GameObject[] myPrefab;
 
-    void Start()
+    void Awake()
     {
         path = Application.streamingAssetsPath + "/NPC.json";
         jsonString = File.ReadAllText(path);
@@ -23,16 +23,36 @@ public class JSONLoader : MonoBehaviour
 
     void CreateNPC(NPC npc)
     {
-        NPC_Controller npcCont = myPrefab.GetComponent<NPC_Controller>();
+        if (npc.type == "Worker")
+        {
+            NPC_Controller npcCont = myPrefab[0].GetComponent<NPC_Controller>();
 
-        npcCont.target = new Transform[npc.Schedule.Length];
+            npcCont.target = new Transform[npc.Schedule.Length];
 
-        for (int i = 0; i < npc.Schedule.Length; i++)
-            npcCont.target[i] = GameObject.Find(npc.Schedule[i]).transform;
+            for (int i = 0; i < npc.Schedule.Length; i++)
+                npcCont.target[i] = GameObject.Find(npc.Schedule[i]).transform;
 
-        npcCont.worker_id = npc.id;
+            npcCont.worker_id = npc.id;
 
-        Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            npcCont.gameObject.name = "Woker: " + npc.id;
+
+            Instantiate(myPrefab[0], new Vector3(0, 0, 0), Quaternion.identity);
+        }
+        else
+        {
+            NPC_Controller npcCont = myPrefab[1].GetComponent<NPC_Controller>();
+
+            npcCont.isBoss = true;
+
+            npcCont.target = new Transform[npc.Schedule.Length];
+
+            for (int i = 0; i < npc.Schedule.Length; i++)
+                npcCont.target[i] = GameObject.Find(npc.Schedule[i]).transform;
+
+            npcCont.worker_id = npc.id;
+
+            Instantiate(myPrefab[1], new Vector3(0, 0, 0), Quaternion.identity);
+        }
     }
 }
 

@@ -19,9 +19,6 @@ public class followPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
-        target.Rotate(0, horizontal, 0);
-
         float desiredAngle = target.eulerAngles.y;
 
         Quaternion rotation = Quaternion.Euler(5f, desiredAngle, 0);
