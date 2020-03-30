@@ -18,7 +18,7 @@ public class Chair : MonoBehaviour
 
     }
 
-    void OnTriggerStay(Collider other)
+    /*void OnTriggerStay(Collider other)
     {
         isTaken = true;
     }
@@ -26,5 +26,5 @@ public class Chair : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         isTaken = false;
-    }
+    }*/
 }

@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 53.2, z: 0}
+  m_LocalPosition: {x: 0, y: 30.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2164,7 +2164,7 @@ GameObject:
   - component: {fileID: 368378165360077699}
   - component: {fileID: 368378165360077698}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_3
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -2179,7 +2179,7 @@ BoxCollider:
   m_GameObject: {fileID: 368378165360077697}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.7319939, y: 0.7061305, z: 0.961262}
   m_Center: {x: 0.5265686, y: -0.00000011920929, z: 0.48063087}
@@ -3084,7 +3084,7 @@ GameObject:
   - component: {fileID: 534042770909208884}
   - component: {fileID: 534042770909208883}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_2
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -3099,7 +3099,7 @@ BoxCollider:
   m_GameObject: {fileID: 534042770909208882}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.9429922, y: 0.7061301, z: 0.9612615}
   m_Center: {x: 0.6320677, y: 0, z: 0.48063076}
@@ -6250,7 +6250,7 @@ GameObject:
   - component: {fileID: 1474444661815612357}
   - component: {fileID: 1474444661815612356}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_0
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -6265,7 +6265,7 @@ BoxCollider:
   m_GameObject: {fileID: 1474444661815612355}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.9023068, y: 0.7061304, z: 0.96126187}
   m_Center: {x: 0.61172676, y: 0.00000002601312, z: 0.48063087}
@@ -8916,7 +8916,7 @@ GameObject:
   - component: {fileID: 2184857779315431001}
   - component: {fileID: 2184857779315431000}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_1
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -8931,7 +8931,7 @@ BoxCollider:
   m_GameObject: {fileID: 2184857779315430999}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.9003701, y: 0.70613045, z: 0.96126187}
   m_Center: {x: 0.6107574, y: 0.0000002185884, z: 0.48062629}
@@ -15768,7 +15768,7 @@ GameObject:
   - component: {fileID: 4284532376136460206}
   - component: {fileID: 4284532376136460205}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_5
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -15783,7 +15783,7 @@ BoxCollider:
   m_GameObject: {fileID: 4284532376136460204}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.7651125, y: 0.7061304, z: 0.96126187}
   m_Center: {x: 0.54312867, y: -0.00000018204074, z: 0.48063087}
@@ -24674,7 +24674,7 @@ GameObject:
   - component: {fileID: 6855330463003259835}
   - component: {fileID: 6855330463003259834}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_6
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -24689,7 +24689,7 @@ BoxCollider:
   m_GameObject: {fileID: 6855330463003259833}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.7757057, y: 0.7061301, z: 0.9612615}
   m_Center: {x: 0.54842454, y: 0, z: 0.48063076}
@@ -31643,7 +31643,7 @@ GameObject:
   - component: {fileID: 8772100222261153561}
   - component: {fileID: 8772100222261153560}
   m_Layer: 0
-  m_Name: Meeting_
+  m_Name: MeetingSeat_4
   m_TagString: MeetingSeats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -31658,7 +31658,7 @@ BoxCollider:
   m_GameObject: {fileID: 8772100222261153559}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.7612293, y: 0.70613045, z: 0.96126187}
   m_Center: {x: 0.5411867, y: -0.00000009468337, z: 0.480627}
