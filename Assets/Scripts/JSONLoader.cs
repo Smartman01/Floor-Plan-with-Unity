@@ -34,7 +34,7 @@ public class JSONLoader : MonoBehaviour
 
             npcCont.worker_id = npc.id;
 
-            npcCont.gameObject.name = "Woker: " + npc.id;
+            npcCont.gameObject.name = "Worker: " + npc.id;
 
             Instantiate(myPrefab[0], new Vector3(0, 0, 0), Quaternion.identity);
         }
