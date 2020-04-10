@@ -1,0 +1,12 @@
+{
+    "Items": [
+        {
+            "Day": 0,
+            "Schedule": [ "Normal", "Normal", "Normal", "Normal", "Fire" ]
+        },
+        {
+            "Day": 1,
+            "Schedule": [ "Normal", "Fire", "Normal", "Normal", "Fire" ]
+        }
+    ]
+}

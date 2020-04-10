@@ -11,6 +11,11 @@ public class NPC_Controller : MonoBehaviour
 
     GameObject[] meetingChairs;
 
+    GameObject[] exits;
+
+    [SerializeField]
+    Transform nearestExit;
+
     NavMeshAgent navMeshAgent;
 
     TextMesh textMesh;
@@ -18,6 +23,9 @@ public class NPC_Controller : MonoBehaviour
     public bool isBoss = false;
 
     public int worker_id = 0;
+
+    [SerializeField]
+    public Boolean normalSituation = true;
 
     private void Awake()
     {
@@ -32,6 +40,8 @@ public class NPC_Controller : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         textMesh = GetComponentInChildren<TextMesh>();
+
+        exits = GameObject.FindGameObjectsWithTag("Exit");
         
         if (!isBoss)
             textMesh.text = "Worker: " + worker_id;
@@ -41,9 +51,15 @@ public class NPC_Controller : MonoBehaviour
         Destination();
     }
 
-    private void Destination()
+    public void Destination()
     {
         Vector3 targetDest = target[targetLocation()].transform.position;
+
+        if (!normalSituation)
+        {
+            findNearestExit();
+            targetDest = nearestExit.position;
+        }
 
         navMeshAgent.SetDestination(targetDest);
     }
@@ -79,6 +95,19 @@ public class NPC_Controller : MonoBehaviour
         }
 
         meetingChair.GetComponent<Chair>().isTaken = true;
+    }
+
+    private void findNearestExit()
+    {
+        if (Vector3.Distance(exits[0].transform.position, transform.position) >
+            Vector3.Distance(exits[1].transform.position, transform.position))
+        {
+            nearestExit = exits[1].transform;
+        }
+        else
+        {
+            nearestExit = exits[0].transform;
+        }
     }
 
     // Update is called once per frame
